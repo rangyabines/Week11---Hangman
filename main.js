@@ -8,13 +8,13 @@ var guessWord = 5;
 var phraseLength = 0;
 
 function hangman(){
-	console.log ("Make a wise decision. You have " + guessWord + " remaining.");
+	console.log ("Make a wise decision. You have " + guessWord + " remaining guesses.");
 	inquirer.prompt([{
 
 				name: "guess",
 				type: "input",
 				message: "Guess, Guess, Guess"
-	}]).then(function(result)){
+	}]).then(function(result){
 
 		var x = word.length;
 		
@@ -50,7 +50,7 @@ function hangman(){
 		}
 		phraseLength = word.length - spaces;
 		splitWords();
-	}
+	})
 }
 hangman();
 
